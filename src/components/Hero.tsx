@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Navbar from "./Navbar";
 
 const Hero = () => {
   const images = ["/kidney.avif", "/kidney1.jpg", "/kidney.webp"];
@@ -17,17 +16,6 @@ const Hero = () => {
   }, []);
   return (
     <div>
-      {/* Banner */}
-      <div className="bg-pink-500 text-white text-center py-2 text-sm hidden lg:block ">
-        24 x 7 Advanced Healthcare Made Personal.
-        <span className="float-right pr-4">
-          <i className="fas fa-map-marker-alt"></i> 351, Khudda Jassu, near
-          Gurdwara Sahib, Khudda Lahora, Chandigarh, 160014
-        </span>
-      </div>
-
-      {/* Sticky Navigation */}
-          <Navbar/>
 
       {/* Main content */}
       <div
@@ -66,12 +54,12 @@ const Hero = () => {
           BEST DIALYSIS IN CHANDIGARH
         </h1>
         <p className="relative text-white mt-4 max-w-2xl mx-auto text-lg drop-shadow-lg z-10">
-          With experience of more than 18 years in Healthcare, Dr. Lal ji is
+          With experience of more than 10 years in Healthcare, Dr. Lal ji is
           undoubtedly the best nephrologist in Chandigarh.
         </p>
 
         <div className="relative flex justify-center space-x-4 mt-8 z-10  ">
-          <button className="bg-gradient-to-br w-60 from-purple-500 via-pink-400 opacity-1 text-white px-6 py-3 rounded-full transition hover:bg-purple-600 hover:text-white">
+          <button className="bg-gradient-to-br from-purple-500 via-pink-400 opacity-1 w-60 text-white px-6 py-3 rounded-full transition hover:bg-purple-600 hover:text-white">
             <a href="tel:+918264952313" >CALL US NOW!</a>
           </button>
         </div>

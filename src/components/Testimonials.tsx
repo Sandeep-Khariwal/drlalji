@@ -2,41 +2,30 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import TypewriterClass from "typewriter-effect";
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Sujeet kumar",
-    role: "Patient",
-    feedback:
-      "It has been 3months I got my dialysis done here, I am personally like my dialysis here, good staff, and experience technician and the owner Abhishek sir too polite with patients and caring too.",
-  },
-  {
-    id: 2,
-    name: "Vinod kumar",
-    role: "Patient",
-    feedback:
-      "Lal ji Dileysis center is very good sarvice Cleanliness is very good.Tofik sir and nusrat madam are very good team leaders Rajkishor and kumkum maam they do thair work very well or take good care of the patients Everything is Excellent",
-  },
-  {
-    id: 3,
-    name: "Anjali",
-    role: "Patient",
-    feedback:
-      "Thank you for the excellent care and treatment offered by Doctors  and his team at Dr. Lal Ji Kidney Care Centre (LLP). The nursing staff is well-trained, caring, and supportive.",
-  },
-];
 
-const Testimonials = () => {
+const Testimonials = (props:{
+  testimonials:any[]
+}) => {
   return (
     <div id="testimonials" className="bg-white py-16 p-6 ">
       <div className="max-w-screen-xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">
-          What Our Patients Say
-        </h2>
+        <div className="flex text-3xl font-bold text-gray-800 mb-8 items-center justify-center leading-tight">
+          What Our
+          <div className="text-[#6a5cff] ml-2 inline">
+            <TypewriterClass
+              options={{
+                strings: [" Patients Say!", " Clients Say!"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
+          {props.testimonials.map((testimonial) => (
             <motion.div
               key={testimonial.id}
               initial={{ opacity: 0 }}

@@ -1,6 +1,7 @@
-
+"use client"
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter} from "next/navigation";
 
 const draw = {
   hidden: { pathLength: 0, opacity: 0 },
@@ -18,12 +19,15 @@ const draw = {
 };
 
 const Card = (data: {
+  id:number;
   image: string;
   tittle: string;
   desc: string;
   duration?: string;
   fees?: string;
 }) => {
+  const navigation = useRouter()
+  
   return (
     <motion.div
       initial={{ y: "10%", opacity: 1 }}
@@ -77,7 +81,7 @@ const Card = (data: {
         {data.tittle}
       </p>
       <p className="mt-3 text-md m-2 font-poppins text-gray-500 text-center ">
-        {data.desc}
+        {data.desc.substring(0,250) + "..."} <span style={{fontWeight:700, cursor:"pointer"}} onClick={()=>navigation.push(`/profile/${data.id}`)} >Read more</span>
       </p>
     </motion.div>
   );

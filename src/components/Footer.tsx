@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between">
           {/* Logo and Description */}
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold">Dr.Lal ji kidney care center</h2>
+            <h2 className="text-2xl font-bold">Dr. Lal ji kidney care center</h2>
             <p className="text-gray-400 mt-4 text-md">
               Best dialysis center in chandigarh{" "}
             </p>
@@ -15,16 +15,22 @@ const Footer = () => {
 
           <div className="w-full flex flex-col items-start lg:items-center lg:justify-center px-auto md:w-1/4 mb-6 md:mb-0">
           <h3 className="text-2xl font-semibold mb-4">Services we offer</h3>
+          <p className="text-gray-400 hover:text-white text-md" >Emergency 24*7</p>
+          <p className="text-gray-400 hover:text-white text-md" >Ultrasound </p>
+          <p className="text-gray-400 hover:text-white text-md" >General ward</p>
+          <p className="text-gray-400 hover:text-white text-md" >Opration theater</p>
           <p className="text-gray-400 hover:text-white text-md" >Dialysis</p>
-          <p className="text-gray-400 hover:text-white text-md" >Nephrology</p>
-          <p className="text-gray-400 hover:text-white text-md" >Critical Care</p>
-          <p className="text-gray-400 hover:text-white text-md" >Gastroenterology</p>
-          <p className="text-gray-400 hover:text-white text-md" >Laboratory Services</p>
-          <p className="text-gray-400 hover:text-white text-md" >Diagnostic Services</p>
+          <p className="text-gray-400 hover:text-white text-md" >Ambulance</p>
+          <p className="text-gray-400 hover:text-white text-md" >Ayushman</p>
+          <p className="text-gray-400 hover:text-white text-md" >Pharmacy</p>
+          <p className="text-gray-400 hover:text-white text-md" >X-Ray </p>
+          <p className="text-gray-400 hover:text-white text-md" >Lab</p>
+          <p className="text-gray-400 hover:text-white text-md" >ICU</p>
+          <p className="text-gray-400 hover:text-white text-md" >TPA</p>
           </div>
 
           {/* Quick Links */}
-          <div className="w-full flex flex-col items-start lg:items-center lg:justify-center px-auto md:w-1/4 mb-6 md:mb-0">
+          <div className="w-full flex flex-col items-start lg:items-center justify-start px-auto md:w-1/4 mb-6 md:mb-0">
             <h3 className="text-2xl font-semibold mb-4">Quick Links</h3>
             <ul>
               <li>
@@ -41,14 +47,6 @@ const Footer = () => {
                   className="text-gray-400 hover:text-white text-md"
                 >
                   About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#services"
-                  className="text-gray-400 hover:text-white text-md"
-                >
-                  Services
                 </Link>
               </li>
               <li>
@@ -90,6 +88,9 @@ const Footer = () => {
           rights reserved.
         </div>
       </div>
+
+
+
     </footer>
   );
 };
