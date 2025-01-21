@@ -90,7 +90,7 @@ export default function Page() {
                 <foreignObject x="0" y="0" width="200" height="200">
                   <div className="flex justify-center items-center">
                     <Image
-                      src={doctor?.image!!}
+                      src={doctor?.image || ""}
                       alt="Description of image"
                       width={200}
                       height={200}
