@@ -77,7 +77,7 @@ export const testimonials:Testimonial[] = [
     
   ];
 
-export default function page() {
+export default function Page() {
   return (
     <div>
       <Testimonials testimonials={testimonials}/>
