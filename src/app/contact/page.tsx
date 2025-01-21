@@ -10,12 +10,12 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import { Metadata } from "next";
 
-export const metadata:Metadata = {
-  title: {
-    absolute:"drlaljikidneycenter Contact: Reach Out to Us for Support and Inquiries"
-  },
-  description:"Have questions or feedback? Contact drlaljikidneycenter's dedicated support team for assistance and inquiries. We're here to help you make the most of your experience on our platform. Reach out today!"
-}
+// export const metadata:Metadata = {
+//   title: {
+//     absolute:"drlaljikidneycenter Contact: Reach Out to Us for Support and Inquiries"
+//   },
+//   description:"Have questions or feedback? Contact drlaljikidneycenter's dedicated support team for assistance and inquiries. We're here to help you make the most of your experience on our platform. Reach out today!"
+// }
 
 function page() {
   const [state, handleSubmit] = useForm("mkggdgrb");
