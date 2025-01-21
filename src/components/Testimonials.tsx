@@ -26,7 +26,7 @@ const Testimonials = (props:{
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {props.testimonials.map((testimonial) => (
+          {props.testimonials.map((testimonial:Testimonial) => (
             <motion.div
               key={testimonial.id}
               initial={{ opacity: 0 }}
