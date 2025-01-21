@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useForm, ValidationError } from "@formspree/react";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { TbHomePlus } from "react-icons/tb";
@@ -18,12 +17,15 @@ import { IoMdTime } from "react-icons/io";
 // }
 
 function Page() {
-  const [state, handleSubmit] = useForm("mkggdgrb");
+  // const [state, handleSubmit] = useForm("mkggdgrb");
   const navigation = useRouter();
 
-  if (state.succeeded) {
-    toast.success("Form Submited Successfuly!.");
-    navigation.push("/");
+  // if (state.succeeded) {
+  //   toast.success("Form Submited Successfuly!.");
+  //   navigation.push("/");
+  // }
+  const handleSubmit = ()=> {
+
   }
 
   return (
@@ -91,12 +93,12 @@ function Page() {
               required
               placeholder="Mr/Mrs. "
             />
-            <ValidationError
+            {/* <ValidationError
               prefix="Name"
               field="name"
               errors={state.errors}
               className="text-red-500 text-sm mt-1"
-            />
+            /> */}
           </div>
 
           {/* Contact Number Field */}
@@ -117,12 +119,12 @@ function Page() {
               placeholder="Enter 10-digit number"
               maxLength={10}
             />
-            <ValidationError
+            {/* <ValidationError
               prefix="Contact"
               field="contact"
               errors={state.errors}
               className="text-red-500 text-sm mt-1"
-            />
+            /> */}
           </div>
 
           {/* Address Field */}
@@ -140,12 +142,12 @@ function Page() {
               required
               placeholder="Enter patient's address"
             />
-            <ValidationError
+            {/* <ValidationError
               prefix="Address"
               field="address"
               errors={state.errors}
               className="text-red-500 text-sm mt-1"
-            />
+            /> */}
           </div>
 
           {/* Email Field */}
@@ -164,12 +166,12 @@ function Page() {
               required
               placeholder="example@gmil.com"
             />
-            <ValidationError
+            {/* <ValidationError
               prefix="Email"
               field="email"
               errors={state.errors}
               className="text-red-500 text-sm mt-1"
-            />
+            /> */}
           </div>
 
           {/* Message Field */}
@@ -187,19 +189,19 @@ function Page() {
               required
               placeholder="Ask?"
             />
-            <ValidationError
+            {/* <ValidationError
               prefix="Message"
               field="message"
               errors={state.errors}
               className="text-red-500 text-sm mt-1"
-            />
+            /> */}
           </div>
 
           {/* Submit Button */}
           <div>
             <button
               type="submit"
-              disabled={state.submitting}
+              // disabled={state.submitting}
               className="w-full py-2 bg-pink-500 text-white font-semibold rounded-md  disabled:bg-gray-400"
             >
               Submit
