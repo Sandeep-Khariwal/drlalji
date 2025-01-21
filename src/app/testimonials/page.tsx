@@ -17,7 +17,7 @@ export interface Testimonial {
 }
 
 
-export const testimonials:Testimonial[] = [
+export const TestimonialsData:Testimonial[] = [
     {
       id: 1,
       name: "Sujeet kumar",
@@ -80,7 +80,7 @@ export const testimonials:Testimonial[] = [
 export default function page() {
   return (
     <div>
-      <Testimonials testimonials={testimonials}/>
+      <Testimonials testimonials={TestimonialsData}/>
     </div>
   )
 }
