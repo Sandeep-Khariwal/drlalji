@@ -2,7 +2,7 @@ import Hero from "../components/Hero";
 import Map from "../components/Map";
 import Testimonials from "../components/Testimonials";
 import OurExperts from "../components/OurExperts";
-import { TestimonialsData } from "./testimonials/page";
+import { TestimonialsData } from "@/components/data";
 
 export default function Home() {
   return (

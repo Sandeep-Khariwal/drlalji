@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import TypewriterClass from "typewriter-effect";
-import { Testimonial } from "@/app/testimonials/page";
+import { Testimonial } from "./data";
 
 
 const Testimonials = (props:{
