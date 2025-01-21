@@ -28,7 +28,7 @@ export default function Page() {
   const [doctor, setDoctor] = useState<ServiceType>();
 
   useEffect(() => {
-    const doctorProfile = Doctors.filter((d) => d.id === Number(params.id));
+    const doctorProfile:ServiceType[] = Doctors.filter((d:ServiceType) => d.id === Number(params.id));
     if (doctorProfile.length > 0) {
       setDoctor(doctorProfile[0]);
     }

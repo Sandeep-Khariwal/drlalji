@@ -3,10 +3,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import TypewriterClass from "typewriter-effect";
+import { Testimonial } from "@/app/testimonials/page";
 
 
 const Testimonials = (props:{
-  testimonials:any[]
+  testimonials:Testimonial[]
 }) => {
   return (
     <div id="testimonials" className="bg-white py-16 p-6 ">

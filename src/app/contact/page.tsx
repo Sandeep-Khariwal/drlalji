@@ -17,7 +17,7 @@ import { IoMdTime } from "react-icons/io";
 //   description:"Have questions or feedback? Contact drlaljikidneycenter's dedicated support team for assistance and inquiries. We're here to help you make the most of your experience on our platform. Reach out today!"
 // }
 
-function page() {
+function Page() {
   const [state, handleSubmit] = useForm("mkggdgrb");
   const navigation = useRouter();
 
@@ -211,4 +211,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

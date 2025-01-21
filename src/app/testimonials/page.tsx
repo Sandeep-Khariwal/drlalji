@@ -9,7 +9,15 @@ export const metadata:Metadata = {
   description:"Check what our patients saying about Dr. lal ji kidney care center. check review of our patients with Dr. lal ji kidney care center . Reach out today!"
 }
 
-export const testimonials = [
+export interface Testimonial {
+  id: number; 
+  name: string;
+  role: string;
+  feedback: string;
+}
+
+
+export const testimonials:Testimonial[] = [
     {
       id: 1,
       name: "Sujeet kumar",
