@@ -13,7 +13,7 @@ const Hero = () => {
       );
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
   return (
     <div>
 

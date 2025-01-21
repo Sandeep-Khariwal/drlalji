@@ -32,7 +32,7 @@ export default function Page() {
     if (doctorProfile.length > 0) {
       setDoctor(doctorProfile[0]);
     }
-  }, []);
+  }, [params.id]);
   return (
     <>
       <div className="w-full flex flex-col gap-10 items-center justify-between py-10 ">
