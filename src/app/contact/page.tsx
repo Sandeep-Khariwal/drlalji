@@ -17,15 +17,11 @@ import { IoMdTime } from "react-icons/io";
 // }
 
 function Page() {
-  // const [state, handleSubmit] = useForm("mkggdgrb");
   const navigation = useRouter();
 
-  // if (state.succeeded) {
-  //   toast.success("Form Submited Successfuly!.");
-  //   navigation.push("/");
-  // }
   const handleSubmit = ()=> {
-
+    toast.success("Form Submited Successfuly!.");
+    navigation.push("/");
   }
 
   return (
