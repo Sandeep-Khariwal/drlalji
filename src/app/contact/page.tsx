@@ -8,7 +8,7 @@ import { TbHomePlus } from "react-icons/tb";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 
 // export const metadata:Metadata = {
 //   title: {

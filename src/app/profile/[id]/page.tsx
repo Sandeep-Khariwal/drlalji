@@ -23,7 +23,7 @@ const draw = {
   },
 };
 
-export default function page() {
+export default function Page() {
   const params = useParams();
   const [doctor, setDoctor] = useState<ServiceType>();
 
