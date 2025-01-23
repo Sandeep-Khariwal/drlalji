@@ -16,12 +16,11 @@ const Hero = () => {
   }, [images.length]);
   return (
     <div>
-
       {/* Main content */}
       <div
         className="relative text-center py-36 bg-white"
         style={{
-          height: "500px", // Set a fixed height to ensure consistency
+          height: "500px", 
           overflow: "hidden",
         }}
       >
@@ -60,7 +59,7 @@ const Hero = () => {
 
         <div className="relative flex justify-center space-x-4 mt-8 z-10  ">
           <button className="bg-gradient-to-br from-purple-500 via-pink-400 opacity-1 w-60 text-white px-6 py-3 rounded-full transition hover:bg-purple-600 hover:text-white">
-            <a href="tel:+918264952313" >CALL US NOW!</a>
+            <a href="tel:+918264952313">CALL US NOW!</a>
           </button>
         </div>
       </div>

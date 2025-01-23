@@ -93,3 +93,26 @@ export const TestimonialsData:Testimonial[] = [
     },
     
   ];
+
+  export const Gallery:string[] = [
+   "/gallery/dialysis.jpg",
+   "/gallery/dialysis.jpg",
+   "/gallery/dialysis.jpg",
+   "/gallery/hospital.jpg",
+   "/gallery/hospital.jpg",
+   "/gallery/hospital.jpg",
+   "/gallery/ward.jpg",
+   "/gallery/ward.jpg",
+   "/gallery/ward.jpg",
+  ]
+
+  export const Videos:string[] =[
+    "https://www.youtube.com/embed/CbhEVSrmZMk",
+    "https://www.youtube.com/embed/CbhEVSrmZMk",
+    "https://www.youtube.com/embed/CbhEVSrmZMk",
+    "https://www.youtube.com/embed/CbhEVSrmZMk",
+    "https://www.youtube.com/embed/CbhEVSrmZMk",
+    "https://www.youtube.com/embed/CbhEVSrmZMk",
+    "https://www.youtube.com/embed/CbhEVSrmZMk",
+    "https://www.youtube.com/embed/CbhEVSrmZMk",
+  ]

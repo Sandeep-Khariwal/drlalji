@@ -140,7 +140,7 @@ const Navbar = () => {
               <Link
                 onClick={toggleMenu}
                 href="/contact"
-                className="text-gray-600  transition duration-300 ease-in-out hover:text-pink-500 text-lg font-medium py-2"
+              className="text-gray-600  transition duration-300 ease-in-out hover:text-pink-500 "
               >
                 Contact
               </Link>

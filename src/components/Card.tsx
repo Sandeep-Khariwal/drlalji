@@ -81,7 +81,7 @@ const Card = (data: {
         {data.tittle}
       </p>
       <p className="mt-3 text-md m-2 font-poppins text-gray-500 text-center ">
-        {data.desc.substring(0,250) + "..."} <span style={{fontWeight:700, cursor:"pointer"}} onClick={()=>navigation.push(`/profile/${data.id}`)} >Read more</span>
+        {data.desc.substring(0,250) + "..."} <span style={{fontWeight:700, cursor:"pointer", color:"#1E90FF"}} onClick={()=>navigation.push(`/profile/${data.id}`)} >Read more</span>
       </p>
     </motion.div>
   );
