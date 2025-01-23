@@ -18,7 +18,7 @@ enum Tab {
 //   description:"Check what our patients saying about Dr. lal ji kidney care center. check review of our patients with Dr. lal ji kidney care center . Reach out today!"
 // }
 
-function page() {
+function Page() {
   const [selectedTab, setSelectedTab] = useState<Tab>(Tab.DOCTORS);
   return (
     <div className="w-full  ">
@@ -86,4 +86,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
