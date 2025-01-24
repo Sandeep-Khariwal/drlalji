@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { TbMenu } from "react-icons/tb";
-import { TbX } from "react-icons/tb"; 
+import { TbX } from "react-icons/tb";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -73,14 +73,14 @@ const Navbar = () => {
             <Link
               href="/gallery"
               onClick={toggleMenu}
-             className="text-gray-600  transition duration-300 ease-in-out hover:text-pink-500 "
+              className="text-gray-600  transition duration-300 ease-in-out hover:text-pink-500 "
             >
               Gallery
             </Link>
             <Link
               href="/contact"
               onClick={toggleMenu}
-              className="hover:text-pink-500  transition duration-300 ease-in-out"
+              className="text-gray-600  transition duration-300 ease-in-out hover:text-pink-500 "
             >
               Contact
             </Link>
@@ -133,14 +133,14 @@ const Navbar = () => {
               <Link
                 href="/gallery"
                 onClick={toggleMenu}
-                className="text-gray-600  transition duration-300 ease-in-out hover:text-pink-500 "
+                className="text-gray-600  transition duration-300 ease-in-out hover:text-pink-500 text-lg font-medium py-2"
               >
                 Gallery
               </Link>
               <Link
                 onClick={toggleMenu}
                 href="/contact"
-              className="text-gray-600  transition duration-300 ease-in-out hover:text-pink-500 "
+                className="text-gray-600  transition duration-300 ease-in-out hover:text-pink-500 text-lg font-medium py-2"
               >
                 Contact
               </Link>
