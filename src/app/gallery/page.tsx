@@ -96,7 +96,7 @@ const Page = () => {
             videos.map((v: string, i: number) => (
               <div key={i}>
                 <iframe
-                  className="w-[380] xs:w-[400] sm:w-[420] h-[250] lg:w-auto"
+                  className="w-[380] xs:w-[400] sm:w-[420] h-[330] lg:w-auto"
                   src={v}
                 />
               </div>

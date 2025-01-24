@@ -42,7 +42,7 @@ function Page() {
         </div>
       </motion.div>
       <div className="w-full my-8 flex items-center justify-center gap-5">
-        <button
+        {/* <button
           onClick={() => setSelectedTab(Tab.TEAM)}
           className={`${
             Tab.TEAM == selectedTab
@@ -51,7 +51,7 @@ function Page() {
           } px-4 py-2 rounded-lg  border-2 border-pink-600 hover:bg-pink-500 hover:text-white transition duration-300`}
         >
           Team
-        </button>
+        </button> */}
         <button
           onClick={() => setSelectedTab(Tab.DOCTORS)}
           className={`${

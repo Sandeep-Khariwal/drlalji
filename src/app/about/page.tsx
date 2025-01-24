@@ -1,5 +1,6 @@
 import React from "react";
 import ServiceCard from "../../components/ServiceCard";
+import AboutUs from "@/components/About";
 
 const serviceData = [
   {
@@ -66,6 +67,7 @@ const serviceData = [
 function page() {
   return (
     <div className="w-full flex flex-col ">
+      <AboutUs/>
       <div className="w-full  ">
         <div className="w-full bg-pink-500 gap-10 py-5 lg:py-10 pl-5">
           <h1 className="font-bold text-2xl font-sans text-white my-3 ">
