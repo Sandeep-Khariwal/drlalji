@@ -29,7 +29,7 @@ const Navbar = () => {
           <div className="flex gap-2 lg:gap-5  items-center sticky top-0 z-10">
             <Image src={"/logo.jpg"} alt="logo" width={85} height={50} />
             <span className="text-pink-500 text-xl lg:text-2xl font-bold ">
-              Dr. Lal ji <span className="text-black">Kidney center</span>
+              Dr. Lal ji <span className="text-black">Kidney hospital</span>
             </span>
           </div>
 

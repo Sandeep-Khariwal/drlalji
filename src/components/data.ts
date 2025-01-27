@@ -44,6 +44,30 @@ export const Doctors: ServiceType[] = [
       "She is a life member of the Indian Society of Nephrology, North Zone Chapter of Indian Society Of Nephrology, Indian Society of Organ Transplant. She has presented various papers and posters in both National and International conferences. She has also been invited as Chairperson in various Nephrological conferences and forums at national and Zone levels.",
     desc: "Dr. Raka Kaushal has an experience of more than 20 years in the field of Nephrology and Renal Transplant. She has set up one of the largest dialysis centres in North India with world’s latest machines and supportive equipment. As a Leading Nephrologist of the region, She has Supervised over 1,00,000 dialysis and over 800 Renal Transplants.",
   },
+  {
+    id: 5,
+    image: "/doctors/dr-attri.jpg",
+    tittle: "Dr. Tarun Attri",
+    education: "Dr. Tarun Attri holds DEM, FDM, FAM, PGDMLE, an MBA in Hospital Healthcare, and certifications in Operation Management and Artificial Intelligence in Healthcare.",
+   achievement:"Dr. Attri boasts over a decade of vast experience in clinical services, particularly focusing on nephrology and hemodialysis. His extensive expertise, leadership as Medical Superintendent, and innovative contributions to healthcare have earned him recognition and accolades throughout his career.",
+    desc:"Dr. Tarun Attri is a dedicated medical professional with over 10 years of experience in the field of medicine. With a specialization and keen interest in nephrology and patient care, he consistently strives to blend traditional and modern approaches to enhance the well-being of his patients. Currently serving as the Medical Superintendent, Dr. Attri is committed to delivering exceptional clinical services and improving healthcare outcomes."
+    },
+    {
+      id:6,
+      image:"/doctors/dr-saptarghya.jpg",
+      tittle:"Dr. Saptarghya Mandal",
+      education:"Dr. Saptarghya Mandal earned his M.D. in Internal Medicine from PGIMER, Chandigarh (2021–2023) and completed his MBBS from Medical College & Hospital, Kolkata (2014–2020).",
+      achievement:"Dr. Saptarghya Mandalbrings years of hands-on experience in managing critical cases, with expertise in ICU management, patient handling, and advanced procedures like intubation, central lines, and chest tubes. His skills extend to managing complex illnesses, including coronary artery disease, heart failure, chronic kidney disease, and autoimmune diseases. With multilingual capabilities in English, Hindi, Bengali, and Punjabi, Dr. Mandal ensures effective communication with a diverse range of patients.",
+      desc:"Dr. Saptarghya Mandal is a dedicated and hardworking medical professional with extensive experience in patient assessment, differential diagnosis, and treatment prescription. Currently serving in multiple capacities, including Senior Resident roles in Critical Care Units and Consultant in Internal Medicine, Dr. Mandal has a strong commitment to providing exceptional patient care across various healthcare settings."
+    },
+    // {
+    //   id:6,
+    //   image:"",
+    //   tittle:"",
+    //   education:"",
+    //   achievement:"",
+    //   desc:""
+    // },
 ];
 
 export interface Testimonial {
@@ -76,35 +100,35 @@ export const TestimonialsData: Testimonial[] = [
       "Thank you for the excellent care and treatment offered by Doctors  and his team at Dr. Lal Ji Kidney Care Centre (LLP). The nursing staff is well-trained, caring, and supportive.",
   },
   {
-    id: 3,
+    id: 4,
     name: "Ashok singh",
     role: "Patient",
     feedback:
       "They are very helpful and kind Staff is very cooperative, i bring my father for dialysis over here twice a week, good hygiene is also maintained, they treat us like family, Dr Taufeeq Samad is very humble,  thank you for your services",
   },
   {
-    id: 3,
+    id: 5,
     name: "Vinod singh",
     role: "Patient",
     feedback:
       "Lal ji Dileysis center is very good sarvice Cleanliness is very good. Tofik sir and nusrat madam are very good team leaders Rajkishor and kumkum maam they do thair work very well or take good care of the patients Everything is Excellent",
   },
   {
-    id: 3,
+    id: 6,
     name: "Manish Kumar",
     role: "Patient",
     feedback:
       "Nice all staf are very good 👍 and helpful,  and every dialysis change daylaser ,so no infection , I am so happy....... And spacly thanks and helpful good man Raj sir very nice person.",
   },
   {
-    id: 3,
+    id: 7,
     name: "Preeti",
     role: "Patient",
     feedback:
       "Mere friend ke father ka yaha dialysis hota tha unki bhot khrab condition thi but this hospital hats off all staff and doctors. So wonderable technician's",
   },
   {
-    id: 3,
+    id: 8,
     name: "Payal Sadwal",
     role: "Patient",
     feedback:

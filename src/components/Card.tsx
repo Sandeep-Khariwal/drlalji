@@ -77,11 +77,11 @@ const Card = (data: {
         </foreignObject>
       </motion.svg>
 
-      <p className="font-semibold text-[#36454F] m-4 text-xl leading-tight text-center ">
+      <p className="font-semibold font-roboto text-[#36454F] m-4 text-xl leading-tight text-center ">
         {data.tittle}
       </p>
-      <p className="mt-3 text-md m-2 font-poppins text-gray-500 text-center ">
-        {data.desc.substring(0,250) + "..."} <span style={{fontWeight:700, cursor:"pointer", color:"#1E90FF"}} onClick={()=>navigation.push(`/profile/${data.id}`)} >Read more</span>
+      <p className="mt-3 text-md  m-2 font-roboto text-gray-500 text-center ">
+        {data.desc.substring(0,250) + "..."} <span className="font-roboto" style={{fontWeight:700, cursor:"pointer", color:"#1E90FF"}} onClick={()=>navigation.push(`/profile/${data.id}`)} >Read more</span>
       </p>
     </motion.div>
   );

@@ -1,37 +1,55 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { TbHomePlus } from "react-icons/tb";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
-// import { Metadata } from "next";
+import axios from "axios";
 
-// export const metadata:Metadata = {
-//   title: {
-//     absolute:"drlaljikidneycenter Contact: Reach Out to Us for Support and Inquiries"
-//   },
-//   description:"Have questions or feedback? Contact drlaljikidneycenter's dedicated support team for assistance and inquiries. We're here to help you make the most of your experience on our platform. Reach out today!"
-// }
+interface FormData {
+  email: string,
+  name: string,
+  contact: string,
+  address: string,
+  message: string
+}
 
 function Page() {
   const navigation = useRouter();
+  const [data,setData] = useState<FormData>({
+    email: "",
+    name: "",
+    contact: "",
+    address: "",
+    message: ""
+  })
 
-  const handleSubmit = ()=> {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async()=> {
+    await axios.post("https://www.drlaljikidneycarehospital.in/api/email",data).then((response)=>response.data)
     toast.success("Form Submited Successfuly!.");
     navigation.push("/");
   }
 
+
   return (
-    <div className="w-full flex flex-col gap-10 lg:flex-row items-center lg:items-start justify-evenly min-h-[100vh] py-16 ">
+    <div className="w-full text-white font-Poppins flex flex-col gap-10 lg:flex-row items-center lg:items-start justify-evenly min-h-[100vh] py-16 ">
 
       <div className=" w-[90%] lg:w-1/3">
-        <div className="flex items-center justify-center p-6 bg-pink-400 rounded-lg shadow-md">
+        <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#c34aff] to-[#6a5cff] rounded-lg shadow-md">
           <div className="bg-pink-200 bg-opacity-50 py-4 p-2 rounded-t-lg">
             <div className="w-full flex gap-10 items-start " >
-             <TbHomePlus size={40}  />
+             <TbHomePlus size={40} color="white"  />
              <div className="w-[80%] flex flex-col gap-3 " >
                 <h3 className=" text-xl font-bold font-sans  " >ADDRESS </h3>
                 <p className=" text-lg font-serif " >khudda jassu, near gurdwara sahib, Khudda Lahora, Chandigarh, Chandigarh 160014</p>
@@ -39,7 +57,7 @@ function Page() {
             </div>
 
             <div className="w-full flex gap-10 items-start mt-10 " >
-             <MdOutlineMarkEmailUnread size={40} />
+             <MdOutlineMarkEmailUnread size={40} color="white"  />
              <div className="w-[80%] flex flex-col gap-3 ">
                 <h3 className=" text-xl font-bold font-sans " >EMAIL </h3>
                 <p className=" text-xl font-serif  " >drlaljikidney@gmail.com</p>
@@ -47,7 +65,7 @@ function Page() {
             </div>
 
             <div className="w-full flex gap-10 items-start  mt-10 " >
-             <FaPhoneAlt size={40} />
+             <FaPhoneAlt size={40} color="white"  />
              <div className="w-[80%] flex flex-col gap-3 ">
                 <h3 className=" text-xl font-bold font-sans " >PHONE</h3>
                 <p className=" text-xl font-sans  " >(+91) - 8264952313</p>
@@ -55,7 +73,7 @@ function Page() {
             </div>
 
             <div className="w-full flex gap-10 items-start mt-10 " >
-             <IoMdTime size={40} />
+             <IoMdTime size={40} color="white" />
              <div className="w-[80%] flex flex-col gap-3 ">
                 <h3 className=" text-xl font-bold font-sans " >
                 TIMING : </h3>
@@ -72,7 +90,7 @@ function Page() {
         <h2 className="text-3xl sm:text-4xl font-semibold font-sans text-center text-gray-800 mb-6">
           Contact Us
         </h2>
-        <form className="space-y-6" onSubmit={handleSubmit}>
+        <form className="space-y-6" >
           {/* Patient Name Field */}
           <div>
             <label
@@ -87,14 +105,9 @@ function Page() {
               name="name"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
               required
+              onChange={handleChange}
               placeholder="Mr/Mrs. "
             />
-            {/* <ValidationError
-              prefix="Name"
-              field="name"
-              errors={state.errors}
-              className="text-red-500 text-sm mt-1"
-            /> */}
           </div>
 
           {/* Contact Number Field */}
@@ -109,18 +122,13 @@ function Page() {
               id="contact"
               type="tel"
               name="contact"
-              pattern="^[7-9][0-9]{9}$" // Indian phone numbers: Starts with 7-9, followed by 9 digits
+              pattern="^[7-9][0-9]{9}$" 
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
               required
+              onChange={handleChange}
               placeholder="Enter 10-digit number"
               maxLength={10}
             />
-            {/* <ValidationError
-              prefix="Contact"
-              field="contact"
-              errors={state.errors}
-              className="text-red-500 text-sm mt-1"
-            /> */}
           </div>
 
           {/* Address Field */}
@@ -136,14 +144,9 @@ function Page() {
               name="address"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
               required
+              onChange={handleChange}
               placeholder="Enter patient's address"
             />
-            {/* <ValidationError
-              prefix="Address"
-              field="address"
-              errors={state.errors}
-              className="text-red-500 text-sm mt-1"
-            /> */}
           </div>
 
           {/* Email Field */}
@@ -160,14 +163,9 @@ function Page() {
               name="email"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
               required
+              onChange={handleChange}
               placeholder="example@gmil.com"
             />
-            {/* <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-              className="text-red-500 text-sm mt-1"
-            /> */}
           </div>
 
           {/* Message Field */}
@@ -183,27 +181,22 @@ function Page() {
               name="message"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
               required
+              onChange={handleChange}
               placeholder="Ask?"
             />
-            {/* <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-              className="text-red-500 text-sm mt-1"
-            /> */}
           </div>
 
           {/* Submit Button */}
           <div>
+          </div>
+        </form>
             <button
               type="submit"
-              // disabled={state.submitting}
+              onClick={handleSubmit}
               className="w-full py-2 bg-pink-500 text-white font-semibold rounded-md  disabled:bg-gray-400"
             >
               Submit
             </button>
-          </div>
-        </form>
       </div>
     </div>
   );
