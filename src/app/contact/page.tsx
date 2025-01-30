@@ -26,6 +26,7 @@ function Page() {
     address: "",
     message: ""
   })
+  const [button,setButton] = useState<string>("Submit")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -36,9 +37,18 @@ function Page() {
   };
 
   const handleSubmit = async()=> {
-    await axios.post("https://www.drlaljikidneycarehospital.in/api/email",data).then((response)=>response.data)
-    toast.success("Form Submited Successfuly!.");
-    navigation.push("/");
+    if(data.contact.length != 10){
+      toast.error("Only 10 digit contact number!!");
+      return
+    }
+    setButton("Loading...")
+    const response = await axios.post("https://www.drlaljikidneycarehospital.in/api/email",data).then((response)=>response.data)
+
+    if(response.status){
+      setButton("Submit")
+      toast.success("Form Submited Successfuly!.");
+      navigation.push("/");
+    }
   }
 
 
@@ -103,8 +113,9 @@ function Page() {
               id="name"
               type="text"
               name="name"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+              className="w-full text-black px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
               required
+              value={data.name}
               onChange={handleChange}
               placeholder="Mr/Mrs. "
             />
@@ -120,14 +131,16 @@ function Page() {
             </label>
             <input
               id="contact"
-              type="tel"
+              type="number"
               name="contact"
               pattern="^[7-9][0-9]{9}$" 
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+              className="w-full text-black px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
               required
+              value={data.contact}
               onChange={handleChange}
               placeholder="Enter 10-digit number"
               maxLength={10}
+              minLength={10}
             />
           </div>
 
@@ -142,8 +155,9 @@ function Page() {
             <textarea
               id="address"
               name="address"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+              className="w-full text-black px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
               required
+              value={data.address}
               onChange={handleChange}
               placeholder="Enter patient's address"
             />
@@ -161,8 +175,9 @@ function Page() {
               id="email"
               type="email"
               name="email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+              className="w-full text-black px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
               required
+              value={data.email}
               onChange={handleChange}
               placeholder="example@gmil.com"
             />
@@ -179,8 +194,9 @@ function Page() {
             <textarea
               id="message"
               name="message"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+              className="w-full text-black px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
               required
+              value={data.message}
               onChange={handleChange}
               placeholder="Ask?"
             />
@@ -195,7 +211,7 @@ function Page() {
               onClick={handleSubmit}
               className="w-full py-2 bg-pink-500 text-white font-semibold rounded-md  disabled:bg-gray-400"
             >
-              Submit
+              {button}
             </button>
       </div>
     </div>
