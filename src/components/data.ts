@@ -138,23 +138,16 @@ export const TestimonialsData: Testimonial[] = [
 
 export const Gallery: string[] = [
   "/gallery/dialysis.jpg",
-  "/gallery/dialysis.jpg",
-  "/gallery/dialysis.jpg",
-  "/gallery/hospital.jpg",
-  "/gallery/hospital.jpg",
   "/gallery/hospital.jpg",
   "/gallery/ward.jpg",
-  "/gallery/ward.jpg",
-  "/gallery/ward.jpg",
+  "/gallery/ward1.jpg",
+  "/gallery/ward2.jpg",
+  "/gallery/ward3.jpg",
 ];
 
 export const Videos: string[] = [
-  "https://www.youtube.com/embed/CbhEVSrmZMk",
-  "https://www.youtube.com/embed/CbhEVSrmZMk",
-  "https://www.youtube.com/embed/CbhEVSrmZMk",
-  "https://www.youtube.com/embed/CbhEVSrmZMk",
-  "https://www.youtube.com/embed/CbhEVSrmZMk",
-  "https://www.youtube.com/embed/CbhEVSrmZMk",
-  "https://www.youtube.com/embed/CbhEVSrmZMk",
-  "https://www.youtube.com/embed/CbhEVSrmZMk",
+  "https://www.youtube.com/embed/K5Fn0esgpss",
+  "https://www.youtube.com/embed/LWDPa2zYgbE",
+  "https://www.youtube.com/embed/veaAoaZGNc",
+  "https://www.youtube.com/embed/j3OfwPAWlDo"
 ];
